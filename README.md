@@ -1,10 +1,10 @@
-# password-generator # 
+# password # 
     
 ## Table of Contents ##
     
 ## Description ## 
     
-javascript generates password
+cool
     
 ## Installation ##
     
