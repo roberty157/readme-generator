@@ -78,7 +78,7 @@ inquirer
   ])
   .then((response) =>{
     const fs = require('fs');
-    const Text = `#${response.title}
+    const Text = `# ${response.title}
                  `;
     /*
     https://www.linkedin.com/in/robert-yeam-64b512171/
