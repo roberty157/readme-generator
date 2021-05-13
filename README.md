@@ -1,2 +1,2 @@
-# readme-generator
--node.js generates readme
+#password-generator
+                 
