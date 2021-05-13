@@ -31,13 +31,12 @@ inquirer
       message: 'What is your project title?',
       name: 'title',
     },
-
-    /*
     {
       type: 'input',
       message: 'enter description:',
       name: 'description',
     },
+    /*
     {
       type: 'input',
       message: 'enter installation instructions:',
@@ -79,7 +78,8 @@ inquirer
   .then((response) =>{
     const fs = require('fs');
     const Text = `# ${response.title}
-                 `;
+                 ## Description
+                 ${response.description}`;
     /*
     https://www.linkedin.com/in/robert-yeam-64b512171/
     https://github.com/roberty157
