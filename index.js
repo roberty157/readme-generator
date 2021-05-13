@@ -77,9 +77,7 @@ inquirer
   ])
   .then((response) =>{
     const fs = require('fs');
-    const Text = `# ${response.title}
-                 ## Description
-                 ${response.description}`;
+    const Text = `# ${response.title} # \n## Description ## \n${response.description}`;
     /*
     https://www.linkedin.com/in/robert-yeam-64b512171/
     https://github.com/roberty157
