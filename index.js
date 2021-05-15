@@ -1,6 +1,116 @@
 const inquirer = require('inquirer');
 
+const generateMarkdown = require('./util/generateMarkdown');
+//https://gist.github.com/rachelhyman/b1f109155c9dafffe618
+
+// TODO: Include packages needed for this application
+
+// TODO: Create an array of questions for user input
+const questions=['What is your project title?',
+                'How would you describe your project?',
+                'How do you install this project?',
+                'What is the usage information?',
+                'What are the contribution guidelines?',
+                'What are the test instructions?',
+                'What is the license?',
+                'What is your GitHub username?',
+                'What is your email address?'];
+
+// TODO: Create a function to write README file
+function writeToFile(fileName,data){
+  const fs = require('fs');
+  /*
+  fs.writeFile('README.md', Text,
+    (error)=>{
+        !!error ? console.log(error) : console.log("Success!");
+    })
+  */
+  const Text = generateMarkdown.generateMarkdown(data);
+  fs.writeFile(fileName, Text,
+  (error)=>{
+      !!error ? console.log(error) : console.log("Success!");
+  })
+}
+
+// TODO: Create a function to initialize app
+function init() {
+  inquirer
+  .prompt([
+    {
+      type:'input',
+      message: questions[0],
+      name:'title'
+    },
+    {
+      type:'input',
+      message: questions[1],
+      name:'description'
+    },
+    /*
+    {
+      type: 'input',
+      message: question[2],
+      name: ''
+    }
+    {
+      type: 'input',
+      message: question[3],
+      name: ''
+    }
+    {
+      type: 'input',
+      message: question[4],
+      name: ''
+    },
+
+    */
+    {
+      type:'list',
+      message: questions[5],
+      name: 'license',
+      choices: ['Apache License 2.0',
+      'GNU General Public License v3.0',
+      'MIT License',
+      'BSD 2-Clause "Simplified" License',
+      'BSD 3-Clause "New" or "Revised" License',
+      'Boost Software License 1.0',
+      'Creative Commons Zero v1.0 Universal',
+      'Eclipse Public License 2.0',
+      'GNU Affero General Public License v3.0',
+      'GNU General Public License v2.0',
+      'GNU Lesser General Public License v2.1',
+      'Mozilla Public License',
+      'The Unlicense'
+      ]
+    }
+    /*
+    ,{
+      type: 'input',
+      message: question[6],
+      name: ''
+    }
+    {
+      type: 'input',
+      message: question[7],
+      name: ''
+    }
+    {
+      type: 'input',
+      message: question[8],
+      name: ''
+    }
+    */
+  ])
+  .then((response)=>{
+    writeToFile('README.md', response);
+  })
+}
+
+// Function call to initialize app
+init();
+
 //{ name:'', link:''},
+/*
 const LicenseLinks = [
     { name: 'Apache License 2.0', link: '[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)' },
     { name:'GNU General Public License v3.0', link:'[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)'},
@@ -16,7 +126,7 @@ const LicenseLinks = [
     { name:'Mozilla Public License 2.0', link:'[![License: MPL 2.0](https://img.shields.io/badge/License-MPL%202.0-brightgreen.svg)](https://opensource.org/licenses/MPL-2.0)'},
     { name:'The Unlicense', link:'[![License: Unlicense](https://img.shields.io/badge/license-Unlicense-blue.svg)](http://unlicense.org/)'}
 ]
-
+*/
 
 //project title
 //description, installation instructions
@@ -60,6 +170,8 @@ const LicenseLinks = [
 */
 //username
 //email address
+
+/*
 inquirer
   .prompt([
     {
@@ -72,7 +184,7 @@ inquirer
       message: 'enter description:',
       name: 'description',
     },
-    /*
+    
     {
       type: 'input',
       message: 'enter installation instructions:',
@@ -93,7 +205,7 @@ inquirer
         message: 'enter test instructions',
         name: 'tests',
     },
-    */
+    
     {
         type: 'list',
         message: 'enter test instructions',
@@ -113,7 +225,7 @@ inquirer
                 'The Unlicense'
                 ]
     },
-    /*
+    
     {
         type: 'input',
         message: 'enter GitHub username',
@@ -124,17 +236,16 @@ inquirer
         message: 'enter email address',
         name: 'email',
     },
-    */
+    
   ])
   .then((response) =>{
-    const fs = require('fs');
-
+    
     console.log(typeof response.tests);
     let testChoice = response.tests;
     let pos = LicenseLinks.map(function(e) { return e.name; }).indexOf(testChoice);
     let link = LicenseLinks[pos].link;
     console.log(link);
-
+    
     const Text = `# ${response.title} # 
     \n${link}
     \n## Table of Contents ##
@@ -148,11 +259,7 @@ inquirer
     \n${testChoice}
     \n## Questions ##`;
     
-    
-    fs.writeFile('README.md', Text,
-    (error)=>{
-        !!error ? console.log(error) : console.log("Success!");
-    })
-    
-    }
-    );
+    writeToFile('README.md',response);
+  }
+  );
+  */
