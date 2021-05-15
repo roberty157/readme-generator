@@ -1,17 +1,17 @@
 # recipidia # 
     
-[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
+[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
     
 ## Table of Contents ##
-[Installation](##Installation##)
-[Usage](## Usage)
-[License](## License)
-[Contributing](## Contributing)
-[Tests](## Tests)
-[Questions(## Questions)]
+    [Installation](##Installation##)
+    [Usage](##Usage##)
+    [License](##License##)
+    [Contributing](##Contributing##)
+    [Tests](##Tests##)
+    [Questions](##Questions##)
 
     
-search recipes
+search recipes and update schedule
     
 ## Installation ##
     
@@ -23,7 +23,7 @@ search recipes
     
 ## License ##
     
-GNU General Public License v3.0
+Apache License 2.0
     
 ## Questions ##
     
