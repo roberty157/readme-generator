@@ -69,12 +69,12 @@ function generateMarkdown(data){
     return `# ${data.title} # 
     \n${renderLicenseSection(data.license)}
     \n## Table of Contents ##
-    \n- [Installation](##Installation##)
-    \n- [Usage](##Usage##)
-    \n- [License](##License##)
-    \n- [Contributing](##Contributing##)
-    \n- [Tests](##Tests##)
-    \n- [Questions](##Questions##)
+    \n- [Installation](#Installation)
+    \n- [Usage](#Usage)
+    \n- [License](#License)
+    \n- [Contributing](#Contributing)
+    \n- [Tests](#Tests)
+    \n- [Questions](#Questions)
 
     \n${data.description}
     \n## Installation ##
