@@ -65,8 +65,28 @@ function init() {
 
     */
     {
-      type:'list',
+      type:'input',
+      message: questions[2],
+      name:'installation'
+    },
+    {
+      type:'input',
+      message: questions[3],
+      name:'usage'
+    },
+    {
+      type:'input',
+      message: questions[4],
+      name:'contribution'
+    },
+    {
+      type:'input',
       message: questions[5],
+      name:'test'
+    },
+    {
+      type:'list',
+      message: questions[6],
       name: 'license',
       choices: ['Apache License 2.0',
       'GNU General Public License v3.0',
@@ -82,24 +102,27 @@ function init() {
       'Mozilla Public License',
       'The Unlicense'
       ]
-    }
+    },
     /*
     ,{
       type: 'input',
       message: question[6],
       name: ''
     }
-    {
-      type: 'input',
-      message: question[7],
-      name: ''
-    }
-    {
-      type: 'input',
-      message: question[8],
-      name: ''
-    }
     */
+    {
+      type: 'input',
+      message: questions[7],
+      name: 'github'
+    },
+    
+    {
+      type: 'input',
+      message: questions[8],
+      name: 'email'
+    }
+    
+    
   ])
   .then((response)=>{
     writeToFile('README.md', response);

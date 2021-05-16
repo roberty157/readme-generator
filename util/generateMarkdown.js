@@ -78,12 +78,20 @@ function generateMarkdown(data){
 
     \n${data.description}
     \n## Installation ##
+    \n${data.installation}
     \n## Usage ##
+    \n${data.usage}
     \n## Contributing ##
+    \n${data.contribution}
     \n## Tests ##
+    \n${data.test}
     \n## License ##
     \n${data.license}
     \n## Questions ##
+    \nusername: ${data.github}
+    \n[link to GitHub](http://github.com/${data.github}/)
+    \nFor additional questions,
+    \nemail me at: ${data.email}
     `;
 }
 

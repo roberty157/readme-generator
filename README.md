@@ -17,19 +17,35 @@
 - [Questions](#Questions)
 
     
-api calls
+very cool
     
 ## Installation ##
     
+download node
+    
 ## Usage ##
+    
+use it to make readme files
     
 ## Contributing ##
     
+no contribution guidelines
+    
 ## Tests ##
+    
+test js
     
 ## License ##
     
 Boost Software License 1.0
     
 ## Questions ##
+    
+username: roberty157
+    
+[link to GitHub](http://github.com/roberty157/)
+    
+For additional questions,
+    
+email me at: robert152@ucsb.edu
     
