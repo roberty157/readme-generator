@@ -67,6 +67,7 @@ function renderLicenseSection(license) {
 function generateMarkdown(data){
     //data.title, data.tests, data.description, 
     return `# ${data.title} # 
+    \nTutorial: https://drive.google.com/file/d/1FBI06fIsCEaTdaAvEEQak1zGrfD0pzS3/view
     \n${renderLicenseSection(data.license)}
     \n## Table of Contents ##
     \n- [Installation](#Installation)
